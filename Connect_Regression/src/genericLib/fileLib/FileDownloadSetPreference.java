@@ -12,7 +12,13 @@ public class FileDownloadSetPreference {
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\geckodriver.exe");     // Gecko driver path setup
 		
 		FirefoxProfile p = new FirefoxProfile();
-		p.setPreference("browser.download.folderList", 2);
+		
+		// 0 - Desktop
+		// 1 - Download folder
+		// 2 - Local drive path		
+		
+		p.setPreference("browser.download.folderList", 2);			
+		
 		p.setPreference("browser.helperapps.neverask.savetodisk", "application/zip");
 		p.setPreference("browser.download.dir" , "D:\\Files\\");
 		
