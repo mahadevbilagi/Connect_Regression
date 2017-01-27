@@ -5,8 +5,8 @@
     <classes>
       <class name="testScripts.WebActivityTestScript">
         <methods>
-          <include name="WebActivityCreateNew_Pass"/>
           <include name="testNewLogs"/>
+          <include name="CloseBrowser"/>
           <include name="LaunchBrowserwithURL"/>
         </methods>
       </class> <!-- testScripts.WebActivityTestScript -->
