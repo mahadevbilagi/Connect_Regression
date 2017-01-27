@@ -1,0 +1,10 @@
+atu.testng.reports
+atu.testng.reports.chart
+atu.testng.reports.enums
+atu.testng.reports.excel
+atu.testng.reports.exceptions
+atu.testng.reports.listeners
+atu.testng.reports.logging
+atu.testng.reports.utils
+atu.testng.reports.writers
+atu.testng.selenium.reports

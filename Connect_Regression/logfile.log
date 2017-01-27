@@ -1,0 +1,62 @@
+2017-01-24 15:24:05,718 INFO  [Log] Welcome Chrome! 
+2017-01-24 15:28:49,070 INFO  [Log] Welcome Chrome! 
+2017-01-24 15:45:10,805 INFO  [Log] Welcome Chrome! 
+2017-01-24 16:06:16,627 INFO  [Log] Welcome Chrome! 
+2017-01-24 16:07:28,114 INFO  [Log] Welcome Chrome! 
+2017-01-24 16:07:35,691 INFO  [RetryExec] I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:2313: Connection reset 
+2017-01-24 16:07:35,691 INFO  [RetryExec] Retrying request to {}->http://localhost:2313 
+2017-01-27 14:28:54,792 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 14:29:02,880 INFO  [RetryExec] I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:7519: Connection reset 
+2017-01-27 14:29:02,880 INFO  [RetryExec] Retrying request to {}->http://localhost:7519 
+2017-01-27 14:30:17,365 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 14:32:50,558 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 14:32:57,907 INFO  [Log] Closing the Firefox! 
+2017-01-27 14:33:00,100 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 14:33:08,031 INFO  [Log] UserName field found 
+2017-01-27 14:33:08,119 INFO  [Log] Password field found 
+2017-01-27 14:33:12,570 INFO  [Log] SignInButton found 
+2017-01-27 14:33:12,574 INFO  [Log] Login with Valid Credentials Test case completed 
+2017-01-27 14:33:24,995 INFO  [Log] Successfully Navigated to section 
+2017-01-27 14:33:25,359 INFO  [Log] Click on Add assignment 
+2017-01-27 14:33:29,597 INFO  [Log] Click on Web Assignment 
+2017-01-27 14:33:29,732 INFO  [Log] Entering the assignment title name 
+2017-01-27 14:33:29,970 INFO  [Log] Entering the assignment description 
+2017-01-27 14:33:30,038 INFO  [Log] Entering the WebLinkOne Name 
+2017-01-27 14:33:30,151 INFO  [Log] Entering the WebURLOne Link 
+2017-01-27 14:33:30,238 INFO  [Log] Click on Add new WebLink 
+2017-01-27 14:33:30,324 INFO  [Log] Entering the WebLinkTwo Name 
+2017-01-27 14:33:30,438 INFO  [Log] Entering the WebURLTwo Link 
+2017-01-27 14:33:36,217 INFO  [Log] Click on NextAssign button 
+2017-01-27 14:33:36,359 INFO  [Log] Entering start date 
+2017-01-27 14:33:36,545 INFO  [Log] Entering Due Date 
+2017-01-27 14:33:36,649 INFO  [Log] Click on Assign button 
+2017-01-27 14:33:36,649 INFO  [Log] Web Activity Assignment created successfully!  
+2017-01-27 14:33:44,685 INFO  [Log] Closing the Firefox! 
+2017-01-27 14:33:46,866 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 14:33:52,175 INFO  [Log] UserName field found 
+2017-01-27 14:33:52,255 INFO  [Log] Password field found 
+2017-01-27 14:33:56,923 INFO  [Log] SignInButton found 
+2017-01-27 14:33:56,927 INFO  [Log] Login with Valid Credentials Test case completed 
+2017-01-27 14:34:08,979 INFO  [Log] Successfully Navigated to section 
+2017-01-27 14:34:09,347 INFO  [Log] Click on Add assignment 
+2017-01-27 14:34:10,746 INFO  [Log] Click on Web Assignment 
+2017-01-27 14:34:10,876 INFO  [Log] Entering the assignment title name 
+2017-01-27 14:34:11,107 INFO  [Log] Entering the assignment description 
+2017-01-27 14:34:11,173 INFO  [Log] Entering the WebLinkOne Name 
+2017-01-27 14:34:11,285 INFO  [Log] Entering the WebURLOne Link 
+2017-01-27 14:34:11,368 INFO  [Log] Click on Add new WebLink 
+2017-01-27 14:34:11,436 INFO  [Log] Entering the WebLinkTwo Name 
+2017-01-27 14:34:11,562 INFO  [Log] Entering the WebURLTwo Link 
+2017-01-27 14:34:13,904 INFO  [Log] Click on NextAssign button 
+2017-01-27 14:34:14,062 INFO  [Log] Entering start date 
+2017-01-27 14:34:14,217 INFO  [Log] Entering Due Date 
+2017-01-27 14:34:14,343 INFO  [Log] Click on Assign button 
+2017-01-27 14:34:14,343 INFO  [Log] Web Activity Assignment created successfully!  
+2017-01-27 15:28:16,962 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 15:29:09,579 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 15:29:17,262 INFO  [Log] Closing the Firefox! 
+2017-01-27 15:29:19,403 INFO  [Log] Welcome Chrome browser! 
+2017-01-27 15:29:24,493 INFO  [Log] UserName field found 
+2017-01-27 15:29:24,585 INFO  [Log] Password field found 
+2017-01-27 15:29:25,942 INFO  [Log] SignInButton found 
+2017-01-27 15:29:25,961 INFO  [Log] Login with Valid Credentials Test case completed 
