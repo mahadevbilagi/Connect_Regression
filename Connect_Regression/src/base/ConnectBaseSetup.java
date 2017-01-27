@@ -18,12 +18,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 import sun.rmi.runtime.Log;
 import atu.testng.reports.ATUReports;
@@ -113,7 +111,7 @@ public class ConnectBaseSetup {
 			//		driver.close();					
 					driver.quit();
 				}				
-				Log.info("Closing the Firefox!");
+				Log.info("Closing the browser instance!");
 			}
 			
 			// ATU Reports Method			
