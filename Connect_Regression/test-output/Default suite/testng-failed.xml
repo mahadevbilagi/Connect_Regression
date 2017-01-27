@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.WebActivityTestScript">
+      <class name="genericLib.fileLib.FileInput">
         <methods>
-          <include name="testNewLogs"/>
-          <include name="CloseBrowser"/>
-          <include name="LaunchBrowserwithURL"/>
+          <include name="createUserTest"/>
         </methods>
-      </class> <!-- testScripts.WebActivityTestScript -->
+      </class> <!-- genericLib.fileLib.FileInput -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
