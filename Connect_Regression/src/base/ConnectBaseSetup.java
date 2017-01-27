@@ -3,6 +3,7 @@ package base;
 import java.awt.AWTException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import objectRepo.BlogAssignment;
 import objectRepo.LoginPage;
@@ -12,12 +13,11 @@ import objectRepo.SpeechAssignment;
 import objectRepo.WebActivityAssignment;
 import objectRepo.WritingAssignment;
 
-import org.apache.log4j.LogManager;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -46,7 +46,7 @@ public class ConnectBaseSetup {
 			protected static String QaStgSectionURL = "http://connectqastg.mheducation.com/connect/hmInstructorSectionHomePortal.do?sectionId=515805475";
 			
 			{
-				System.setProperty("atu.reporter.config", "D:\\WORK\\Connect_Regression\\src\\resources\\ATUPropertyfile\\atu.properties");
+				System.setProperty("atu.reporter.config", "C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\ATUPropertyfile\\atu.properties");
 			}
 			
 			public LoginPage loginPage;
@@ -57,8 +57,8 @@ public class ConnectBaseSetup {
 			public SpeechAssignment SpeechCreate;
 			public WebActivityAssignment WebActivityCreate;
 			
-		//	public static Logger Log = Logger.getLogger(Log.class.getName(), null);
-			public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());
+			public static Logger Log = Logger.getLogger(Log.class.getName(), null);
+		//	public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());
 			
 		//  static final Logger logger = LogManager.getLogger(Bar.class.getName());
 	
@@ -68,22 +68,28 @@ public class ConnectBaseSetup {
 			{
 				DOMConfigurator.configure("log4j.xml"); 
 				
-				System.setProperty("webdriver.gecko.driver","D:\\WORK\\Connect_Regression\\src\\resources\\geckodriver.exe");     // Gecko driver path setup	
+				System.setProperty("webdriver.gecko.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\geckodriver.exe");     // Gecko driver path setup					
+		//		System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
 				
-				System.setProperty("webdriver.chrome.driver","D:\\WORK\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
-				
-			/*	driver = new FirefoxDriver();
+				driver = new FirefoxDriver();
 				Log.info("Welcome Firefox browser!");		
-				waitforApge();*/
-								
-				driver = new ChromeDriver();			
-				Log.info("Welcome Chrome browser!");		
 				waitforApge();
+								
+				/*driver = new ChromeDriver();			
+				Log.info("Welcome Chrome browser!");		
+				waitforApge();*/
 				
 				driver.manage().deleteAllCookies();
 				
 		//		driver.get(Dev2URL);
+				
+				try{
 				driver.get(QaStgURL);
+				}catch(Exception e){
+					e.printStackTrace();
+				}
+				
+				
 		//		driver.get(QaLiveURL);
 				
 				// ATU Reports
