@@ -17,6 +17,7 @@ import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
@@ -58,8 +59,7 @@ public class ConnectBaseSetup {
 			public WebActivityAssignment WebActivityCreate;
 			
 			public static Logger Log = Logger.getLogger(Log.class.getName(), null);
-		//	public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());
-			
+		//	public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());			
 		//  static final Logger logger = LogManager.getLogger(Bar.class.getName());
 	
 		
@@ -69,15 +69,15 @@ public class ConnectBaseSetup {
 				DOMConfigurator.configure("log4j.xml"); 
 				
 				System.setProperty("webdriver.gecko.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\geckodriver.exe");     // Gecko driver path setup					
-		//		System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
+				System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
 				
-				driver = new FirefoxDriver();
+				/*driver = new FirefoxDriver();
 				Log.info("Welcome Firefox browser!");		
-				waitforApge();
-								
-				/*driver = new ChromeDriver();			
-				Log.info("Welcome Chrome browser!");		
 				waitforApge();*/
+								
+				driver = new ChromeDriver();			
+				Log.info("Welcome Chrome browser!");		
+				waitforApge();
 				
 				driver.manage().deleteAllCookies();
 				
@@ -110,14 +110,13 @@ public class ConnectBaseSetup {
 			public void CloseBrowser()
 			{
 					if(driver!=null) {
-					driver.close();
-					//driver.quit();
+			//		driver.close();					
+					driver.quit();
 				}				
 				Log.info("Closing the Firefox!");
 			}
 			
-			// ATU Reports Method	
-			@Test
+			// ATU Reports Method			
 			public void testNewLogs() throws AWTException, IOException {
 		 
 				ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
