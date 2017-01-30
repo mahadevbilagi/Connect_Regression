@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import objectRepo.BlogAssignment;
+import objectRepo.DBA;
 import objectRepo.LoginPage;
 import objectRepo.LogoutPage;
 import objectRepo.Selectsection;
@@ -55,6 +56,7 @@ public class ConnectBaseSetup {
 			public WritingAssignment WriteCreate;
 			public SpeechAssignment SpeechCreate;
 			public WebActivityAssignment WebActivityCreate;
+			public DBA DBACreate;
 			
 			public static Logger Log = Logger.getLogger(Log.class.getName(), null);
 		//	public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());			
@@ -86,8 +88,7 @@ public class ConnectBaseSetup {
 				}catch(Exception e){
 					e.printStackTrace();
 				}
-				
-				
+								
 		//		driver.get(QaLiveURL);
 				
 				// ATU Reports
@@ -101,6 +102,7 @@ public class ConnectBaseSetup {
 				WriteCreate = PageFactory.initElements(driver, WritingAssignment.class);
 				SpeechCreate= PageFactory.initElements(driver, SpeechAssignment.class);
 				WebActivityCreate= PageFactory.initElements(driver, WebActivityAssignment.class);
+				DBACreate= PageFactory.initElements(driver, DBA.class);
 						
 			}					
 
@@ -108,8 +110,8 @@ public class ConnectBaseSetup {
 			public void CloseBrowser()
 			{
 					if(driver!=null) {
-			//		driver.close();					
-					driver.quit();
+					driver.close();					
+				//	driver.quit();
 				}				
 				Log.info("Closing the browser instance!");
 			}
