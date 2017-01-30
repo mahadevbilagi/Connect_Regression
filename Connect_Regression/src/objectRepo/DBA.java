@@ -51,8 +51,8 @@ public class DBA extends ConnectBaseSetup {
 	@FindBy(xpath = "//span[@id='saveexit']")
 	WebElement SaveandExit;		
 	
-	@FindBy(xpath = "//span[@id='reviewassign']")
-	WebElement ReviewandAssign;
+	@FindBy(id = "reviewassign")
+	WebElement ReviewAssign;
 	
 	@FindBy(xpath = "//a[@class='buttons btgy font-normal']")
 	WebElement PreviousSetupAssignment;
@@ -60,9 +60,9 @@ public class DBA extends ConnectBaseSetup {
 	@FindBy(xpath = "//a[@class='buttons btgy']")
 	WebElement SaveandExitRVPage;
 	
-	@FindBy(xpath = "//a[@class='buttons btbl assign']")
-	WebElement Assign;
-		
+	@FindBy(xpath = "//a[text()='Assign']")
+	WebElement AssignButton;
+	
 	@SuppressWarnings("static-access")
 	public DBA(WebDriver driver){
 		this.driver = driver;
@@ -86,15 +86,17 @@ public class DBA extends ConnectBaseSetup {
 		Log.info("Entering the assignment title name");	
 	}
 	
-	public void enterDBADescription(String Description){
+	public void enterDBADescription(String Description) throws InterruptedException{
 		
-		waitforApge();
+		Thread.sleep(2000);
 		driver.switchTo().frame(driver.findElement(By.id("note_ifr")));
-		DBADescription.clear();
-		DBADescription.sendKeys(Keys.ENTER);
+		Thread.sleep(100);
+	/*	DBADescription.clear();
+		DBADescription.sendKeys(Keys.ENTER); */
 		DBADescription.sendKeys(Description);
 		Log.info("Entering the assignment description");	
 		driver.switchTo().parentFrame();
+		Thread.sleep(500);
 	}
 	
 	public void enterScore(String Score){
@@ -138,12 +140,12 @@ public class DBA extends ConnectBaseSetup {
 	}	
 	
 	public void clickReviewandAssign(){
-		ReviewandAssign.click();
+		ReviewAssign.click();
 		Log.info("Click on Review and Assign button");	
 	}
 		
 	public void clickAssign(){
-		Assign.click();
+		AssignButton.click();
 		Log.info("Click on Assign button");	
 	}	
 	
@@ -157,25 +159,34 @@ public void CreateDBAAssignment(String Title,String Description,String Score,boo
 					waitforApge();
 					
 					enterAssignmentTitle(Title);
+					waitforApge();
 					
-				//	enterDBADescription(Description);					
+					enterDBADescription(Description);					
 					waitforApge();
 								
 					enterScore(Score);
+					waitforApge();
 					
 					if(AvailabilityNowORLater){    
 						clickDBAAvailabilityNow();   // true
+						waitforApge();
+						enterDueDate(DueDate);		// assignment due date
+						waitforApge();
 					}else{
 						clickDBAAvailabilityLater();   // false
-					}
-					enterStartDate(StartDate);   // if Start date = Later
-					enterDueDate(DueDate);		// assignment due date
+						waitforApge();
+						enterStartDate(StartDate);   // if Start date = Later
+						waitforApge();
+					}					
 										
+					Thread.sleep(500);
 					clickReviewandAssign();
+					Thread.sleep(500);
 					waitforApge();		
 							
 					waitforApge();
 					clickAssign();
+					Thread.sleep(500);
 				
 				}catch(Exception e)
 				{
