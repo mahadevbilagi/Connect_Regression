@@ -5,10 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import base.ConnectBaseSetup;
-
-import com.sun.org.apache.bcel.internal.generic.Select;
 
 public class SpeechAssignment extends ConnectBaseSetup {	
 	
@@ -162,17 +161,19 @@ public class SpeechAssignment extends ConnectBaseSetup {
 		if(SpeechType=="InClass"){
 
 			InClass.click();
-			
+			 
 			InClassDueDate.click();
-			InClassDueDate.sendKeys("01/18/2017");  // date
+			InClassDueDate.sendKeys("02/02/2017");  // date
 			Log.info("Enter the value of InClass Due Date");
+			Thread.sleep(2000);
 			
 //			InClassDueTime.click();
 //			InClassDueTime.sendKeys("00:30 am");  // date		
 			
 			InClassStartDate.click();
-			InClassStartDate.sendKeys("01/17/2017");  // date
+			InClassStartDate.sendKeys("02/01/2017");  // date
 			Log.info("Enter the value of InClass Start Date");
+			Thread.sleep(2000);
 			
 //			InClassStarttime.click();
 //			InClassStarttime.sendKeys("00:30 am");  // date
@@ -187,7 +188,7 @@ public class SpeechAssignment extends ConnectBaseSetup {
 			Log.info("Enter the Online Due date ");
 			
 			OnlineDueDate.click();
-			OnlineDueDate.sendKeys("01/17/2017");  // date
+			OnlineDueDate.sendKeys("01/31/2017");  // date
 			Log.info("Enter the value of Online Start Date");
 			
 //			OnlineDuetime.click();
@@ -215,37 +216,44 @@ public class SpeechAssignment extends ConnectBaseSetup {
 			Log.info("Click on Student Peer Review = ON");
 			// Rubric logic need to write
 			waitforApge();
+			Thread.sleep(2000);
 			
 			Thread.sleep(500);
 			PeerReviewDueDate.click();
-			PeerReviewDueDate.sendKeys("01/19/2017");   // date
+			PeerReviewDueDate.sendKeys("02/03/2017");   // date
 			Log.info("Enter the Peer Review Due date");
+			Thread.sleep(2000);
 			
 //			PeerReviewDuetime.click(); 
 //			PeerReviewDuetime.sendKeys("00:30 am");  // time		
-						
-			NoOfStudentsPerGroup.click();	
-			waitforApge();
-			Select dropdown = new Select(driver.findElement(By.id("noOfStudentsPerGroup")));
-			dropdown.selectByValue("30");
-			Log.info("Enter the Student Group Value");
+										
+			waitforApge();			
+			
+			Thread.sleep(2000);
+			WebElement element=driver.findElement(By.name("noOfStudentsPerGroup"));
+			Select se=new Select(element);	
+			se.selectByValue("30");			
+			
 			waitforApge();		
 			
 			// Select values logic needed	
-			
+			Thread.sleep(2000);
 			if(show_comments_and_rubric_to == "EveryOne"){
 				EveryOne.click();
 				Log.info("Click on Show Comments and Rubric to 'EveryOne'");
 				waitforApge();
+				Thread.sleep(2000);
 			}else if(show_comments_and_rubric_to == "SpeakerandInstructor")
 				{
 					SpeakerandInstructor.click();
 					Log.info("Click on Show Comments and Rubric to 'Speaker and Instructor'");
 					waitforApge();
+					Thread.sleep(2000);
 				}else if(show_comments_and_rubric_to == "InstructorOnly"){
 					InstructorOnly.click();
 					Log.info("Click on Show Comments and Rubric to 'Instructor Only'");
 					waitforApge();
+					Thread.sleep(2000);
 				}
 			
 		}else{
@@ -261,6 +269,7 @@ public class SpeechAssignment extends ConnectBaseSetup {
 			Log.info("Click on Instructor Review = ON");
 			// Rubric logic need to write
 			waitforApge();
+			Thread.sleep(2000);
 
 		}else{
 			
@@ -272,14 +281,17 @@ public class SpeechAssignment extends ConnectBaseSetup {
 		MessagetoStudents.clear();
 		MessagetoStudents.sendKeys("All the best !!");
 		Log.info("Entering the message to students");
+		Thread.sleep(2000);
 		
 		ReviewandAssign.click();
 		Log.info("Click on Review&Assign button");
 		waitforApge();		
+		Thread.sleep(2000);
 		
 		Assign.click();		
 		Log.info("Click on Assign button");
 		waitforApge();
+		Thread.sleep(2000);
 		
 	}	
 	
