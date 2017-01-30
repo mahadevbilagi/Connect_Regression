@@ -6,7 +6,7 @@ import base.ConnectBaseSetup;
 
 public class SpeechTestScript extends ConnectBaseSetup {			
 
-	@SuppressWarnings("static-access")
+/*	@SuppressWarnings("static-access")
 	@Test // TestID01
 	public void Speech_Now_InClass_On_On_On_EveryOne() throws InterruptedException  
 	{		
@@ -213,6 +213,7 @@ public class SpeechTestScript extends ConnectBaseSetup {
 		logoutPage.ClickonLogoutButton();
 		waitforApge();			
 	}
+	*/
 	
 	@SuppressWarnings("static-access")
 	@Test // TestID09
@@ -240,6 +241,7 @@ public class SpeechTestScript extends ConnectBaseSetup {
 		waitforApge();			
 	}
 	
+/*
 	@SuppressWarnings("static-access")
 	@Test // TestID10
 	public void Speech_Now_Online_On_On_On_SpeakerandInstructor() throws InterruptedException
@@ -1200,6 +1202,6 @@ public class SpeechTestScript extends ConnectBaseSetup {
 		waitforApge();			
 		logoutPage.ClickonLogoutButton();
 		waitforApge();			
-	}
+	}*/
 	
 }
