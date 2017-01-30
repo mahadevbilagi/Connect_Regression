@@ -112,8 +112,8 @@ public class DBA extends ConnectBaseSetup {
 	
 	public void enterDueDate(String DueDate){
 		AvailableDueDate.click();
-		AvailableDueDate.sendKeys(DueDate);
-		Log.info("Entering start date");	
+		AvailableDueDate.sendKeys(DueDate); 
+		 Log.info("Entering start date");	
 	}
 	
 	public void enterDueTime(String DueTime){
