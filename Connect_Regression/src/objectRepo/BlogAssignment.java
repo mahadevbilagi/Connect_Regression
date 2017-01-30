@@ -50,8 +50,7 @@ public class BlogAssignment extends ConnectBaseSetup {
 	@SuppressWarnings("static-access")
 	public BlogAssignment(WebDriver driver){
 		this.driver = driver;
-	}
-	
+	}	
 	
 	public void CheckAddAssignment()
 	{		
