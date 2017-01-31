@@ -144,91 +144,35 @@ public class WebActivityAssignment extends ConnectBaseSetup {
 	
 public void CreateWebActivityAssignmentNew(String Title,String Description,String WebLinkNameOne,String WebLinkURLOne,String WebLinkNameTwo,String WebLinkURLTwo,String StartDate,String DueDate) throws InterruptedException{	
 		
-		try{
-			
-		
-		clickaddassignment();
-		waitforApge();
-		clickWebAssignment();
-		waitforApge();
-		
-		enterAssignmentTitle(Title);
-		enterWebDescritpion(Description);
-		waitforApge();
-		
-		enterWebLinkName1(WebLinkNameOne);
-		enterWebLinkURL1(WebLinkURLOne);
-		
-		clickAddNewWeblink();
-		
-		enterWebLinkName2(WebLinkNameTwo);
-		enterWebLinkURL2(WebLinkURLTwo);
-		
-		clickNextAssign();
-		waitforApge();		
-		enterAvailableStartDate(StartDate);
-		enterAvailableDueDate(DueDate);
-		
-		waitforApge();
-		clickAssign();
-		
-		}catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-	}	
+		try{		
+				clickaddassignment();
+				waitforApge();
+				clickWebAssignment();
+				waitforApge();
+				
+				enterAssignmentTitle(Title);
+				enterWebDescritpion(Description);
+				waitforApge();
+				
+				enterWebLinkName1(WebLinkNameOne);
+				enterWebLinkURL1(WebLinkURLOne);
+				
+				clickAddNewWeblink();
+				
+				enterWebLinkName2(WebLinkNameTwo);
+				enterWebLinkURL2(WebLinkURLTwo);
+				
+				clickNextAssign();
+				waitforApge();		
+				enterAvailableStartDate(StartDate);
+				enterAvailableDueDate(DueDate);
+				
+				waitforApge();
+				clickAssign();
+				
+				}catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+		}	
 }
-	
-/*	public void CreateWebActivityAssignment() throws InterruptedException{	
-		
-		AddAssignment.isEnabled();	
-		AddAssignment.click();
-		Log.info("Click on Add assignment");
-		
-		WebAssignment.isEnabled();	
-		WebAssignment.click();						
-		Log.info("Click on Web Activity assignment");
-
-		AssignmentTitle.sendKeys(Keys.ENTER);
-		AssignmentTitle.sendKeys("Web Activity assignment - 01");	
-		Log.info("Entering the Web Activity assignment title name");
-		
-		waitforApge();
-		WebDescritpion.clear();
-		WebDescritpion.sendKeys(Keys.ENTER);		
-		WebDescritpion.sendKeys("Web Activity assignment description ...");
-		waitforApge();
-		Log.info("Entering the Web Activity assignment description");
-		
-		WebLinkName1.sendKeys("Google");
-		Log.info("Entering the WebLink Name");
-		WebLinkURL1.clear();
-		WebLinkURL1.sendKeys("https://www.google.com");
-		Log.info("Entering the WebURL Link");
-		
-		AddNewWeblink.click();
-		Log.info("Click on Add new WebLink");
-		waitforApge();
-		
-		WebLinkName2.sendKeys("Yahoo");
-		Log.info("Entering the WebLink Name");
-		WebLinkURL2.clear();
-		WebLinkURL2.sendKeys("https://www.Yahoo.com");
-		Log.info("Entering the WebURL Link");
-		waitforApge();
-		
-		NextAssign.click();
-		Log.info("Click Next assign button");		
-		
-		AvailableStartDate.click();
-		AvailableStartDate.sendKeys("01/27/2017");
-		Log.info("Entering the assignment Start date");
-		
-		AvailableDueDate.click();
-		AvailableDueDate.sendKeys("12/31/2017");
-		Log.info("Entering the assignment Due date");
-		waitforApge();
-		
-		Assign.click();
-		Log.info("Click on Assign button");			
-	}*/	

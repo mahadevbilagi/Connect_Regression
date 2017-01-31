@@ -25,8 +25,8 @@ public class WebActivityTestScript extends ConnectBaseSetup {
 		String WebLinkURLOne = "https://www.google.com";
 		String WebLinkNameTwo = "Yahoo";
 		String WebLinkURLTwo = "https://www.Yahoo.com";
-		String StartDate = "01/29/2017";
-		String DueDate = "12/31/2017";
+		String StartDate = "02/10/2017";
+		String DueDate = "02/15/2017";
 		
 		WebActivityCreate.CreateWebActivityAssignmentNew(Title, Description, WebLinkNameOne, WebLinkURLOne, WebLinkNameTwo, WebLinkURLTwo, StartDate, DueDate);		
 		Log.info("Web Activity Assignment created successfully! ");
@@ -37,7 +37,7 @@ public class WebActivityTestScript extends ConnectBaseSetup {
 		waitforApge();			
 	}
 	
-	/*@SuppressWarnings("static-access")
+	@SuppressWarnings("static-access")
 	@Test (invocationCount=1)
 	public void WebActivityCreateNew_Fail() throws InterruptedException
 	{	
@@ -56,7 +56,7 @@ public class WebActivityTestScript extends ConnectBaseSetup {
 		String WebLinkNameTwo = "Yahoo";
 		String WebLinkURLTwo = "https://www.Yahoo.com";
 		String StartDate = "01/21/2017";   // Error start date
-		String DueDate = "12/31/2017";
+		String DueDate = "02/15/2017";
 		
 		WebActivityCreate.CreateWebActivityAssignmentNew(Title, Description, WebLinkNameOne, WebLinkURLOne, WebLinkNameTwo, WebLinkURLTwo, StartDate, DueDate);		
 		Log.info("Web Activity Assignment created successfully! ");
@@ -65,30 +65,6 @@ public class WebActivityTestScript extends ConnectBaseSetup {
 		logoutPage.ClickonLogoutButton();		
 		
 		waitforApge();			
-	}*/
-	
-	
-	
+	}	
 	
 }
-	
-/*	@SuppressWarnings("static-access")
-	@Test (invocationCount=1)
-	public void WebActivityCreate() throws InterruptedException
-	{	
-		loginPage.CheckLoginWithValidCred("mahadev@gmail.com", "123456");
-		Log.info("Login with Valid Credentials Test case completed");
-		
-		Thread.sleep(2000);
-		selectsection.navigatetosection();		
-		Thread.sleep(5000);					
-		Log.info("Successfully Navigated to section");		
-		
-		WebActivityCreate.CreateWebActivityAssignment();		
-		Log.info("Web Activity Assignment created successfully! ");
-		
-		waitforApge();			
-		logoutPage.ClickonLogoutButton();		
-		
-		waitforApge();			
-	}	*/
