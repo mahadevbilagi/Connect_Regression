@@ -81,6 +81,7 @@ public class DBA extends ConnectBaseSetup {
 	}
 	
 	public void enterAssignmentTitle(String Title){
+		AssignmentTitle.clear();
 		AssignmentTitle.sendKeys(Keys.ENTER);
 		AssignmentTitle.sendKeys(Title);
 		Log.info("Entering the assignment title name");	
@@ -91,10 +92,12 @@ public class DBA extends ConnectBaseSetup {
 		Thread.sleep(2000);
 		driver.switchTo().frame(driver.findElement(By.id("note_ifr")));
 		Thread.sleep(100);
-	/*	DBADescription.clear();
-		DBADescription.sendKeys(Keys.ENTER); */
+		DBADescription.clear();
+		DBADescription.sendKeys(Keys.ENTER); 
+		Thread.sleep(500);
 		DBADescription.sendKeys(Description);
-		Log.info("Entering the assignment description");	
+		Log.info("Entering the assignment description");
+		Thread.sleep(500);
 		driver.switchTo().parentFrame();
 		Thread.sleep(500);
 	}
@@ -113,13 +116,15 @@ public class DBA extends ConnectBaseSetup {
 	public void enterDueDate(String DueDate){
 		AvailableDueDate.click();
 		AvailableDueDate.sendKeys(DueDate); 
-		 Log.info("Entering start date");	
+		 Log.info("Entering DueDate");	
 	}
 	
-	public void enterDueTime(String DueTime){
-		AvailableDueDate.click();
+	public void enterDueTime(String DueTime) throws InterruptedException{
+		Thread.sleep(500);
+	//	AvailableDueDate.click();
 		AvailableDueDate.sendKeys(DueTime);
-		Log.info("Entering start date");	
+		Thread.sleep(500);
+		Log.info("Entering Duetime");	
 	}	
 	
 	public void clickDBAAvailabilityLater(){
@@ -127,16 +132,19 @@ public class DBA extends ConnectBaseSetup {
 		Log.info("Click on DBA availability Later");	
 	}
 	
-	public void enterStartDate(String DueDate){
+	public void enterStartDate(String StartDate) throws InterruptedException{
+		Thread.sleep(500);
 		AvailableStartDate.click();
-		AvailableStartDate.sendKeys(DueDate);
-		Log.info("Entering start date");	
+		Thread.sleep(500);
+		AvailableStartDate.sendKeys(StartDate);
+		Thread.sleep(500);
+		Log.info("Entering StartDate");	
 	}
 	
-	public void enterStartTime(String DueTime){
-		AvailableStarttime.click();
-		AvailableStarttime.sendKeys(DueTime);
-		Log.info("Entering start date");	
+	public void enterStartTime(String Starttime){
+		//AvailableStarttime.click();
+		AvailableStarttime.sendKeys(Starttime);
+		Log.info("Entering StartDate");	
 	}	
 	
 	public void clickReviewandAssign(){
@@ -156,28 +164,30 @@ public void CreateDBAAssignment(String Title,String Description,String Score,boo
 					waitforApge();
 					
 					clickDBAAssignment();
-					waitforApge();
-					
-					enterAssignmentTitle(Title);
-					waitforApge();
-					
-					enterDBADescription(Description);					
-					waitforApge();
+					waitforApge();							
 								
 					enterScore(Score);
 					waitforApge();
 					
 					if(AvailabilityNowORLater){    
 						clickDBAAvailabilityNow();   // true
-						waitforApge();
+						Thread.sleep(1000);
 						enterDueDate(DueDate);		// assignment due date
 						waitforApge();
 					}else{
 						clickDBAAvailabilityLater();   // false
-						waitforApge();
+						Thread.sleep(1000);
 						enterStartDate(StartDate);   // if Start date = Later
-						waitforApge();
+						Thread.sleep(1000);
+						enterDueDate(DueDate);		// assignment due date
 					}					
+					
+					Thread.sleep(500);
+					enterAssignmentTitle(Title);
+					Thread.sleep(500);
+					
+					enterDBADescription(Description);					
+					Thread.sleep(500);
 										
 					Thread.sleep(500);
 					clickReviewandAssign();
