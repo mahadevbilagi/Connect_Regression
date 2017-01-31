@@ -110,8 +110,8 @@ public class ConnectBaseSetup {
 			public void CloseBrowser()
 			{
 					if(driver!=null) {
-					driver.close();					
-				//	driver.quit();
+				//	driver.close();					
+					driver.quit();
 				}				
 				Log.info("Closing the browser instance!");
 			}
