@@ -111,7 +111,7 @@ public class ConnectBaseSetup {
 			{
 					if(driver!=null) {
 				//	driver.close();					
-					driver.quit();
+					driver.quit(); 	      // driver.quit(); gives problem when we run from GIT-Jenkins 
 				}				
 				Log.info("Closing the browser instance!");
 			}
