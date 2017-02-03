@@ -89,7 +89,7 @@ public class DBA extends ConnectBaseSetup {
 
 	public void enterDBADescription(String Description) throws InterruptedException{
 
-		Thread.sleep(2000);
+		Thread.sleep(2500); 
 		driver.switchTo().frame(driver.findElement(By.id("note_ifr")));
 		Thread.sleep(100);
 		DBADescription.clear();
