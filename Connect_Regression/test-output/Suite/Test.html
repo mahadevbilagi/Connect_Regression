@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/3</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jan 31 17:52:22 IST 2017</td>
+<td>Started on:</td><td>Thu Feb 02 19:14:47 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>178 seconds (178640 ms)</td>
+<tr><td>Total time:</td><td>478 seconds (478813 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,69 +68,61 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testScripts.WebActivityTestScript.WebActivityCreateNew_Fail()'><b>WebActivityCreateNew_Fail</b><br>Test class: testScripts.WebActivityTestScript</td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Start date should be after current date and time}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 191 milliseconds: null
+<td title='testScripts.DBATestScript.CloseBrowser()'><b>CloseBrowser</b><br>Test class: testScripts.DBATestScript</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;unknown&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:43:45 -0700&apos;
-System info: host: &apos;TRICONNODE109&apos;, ip: &apos;192.168.1.54&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\mahadev\AppData\Local\Temp\scoped_dir8760_23241}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 6e298b826012fa2ca4e607bdb5929f47
-*** Element info: {Using=xpath, value=.//*[@id=&apos;headerStripe&apos;]/div/ul/li[4]/a}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at objectRepo.LogoutPage.ClickonLogoutButton(LogoutPage.java:21)
-	at testScripts.WebActivityTestScript.WebActivityCreateNew_Fail(WebActivityTestScript.java:65)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1370074462", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1370074462'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Start date should be after current date and time}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 191 milliseconds: null
+System info: host: &apos;TRICONNODE109&apos;, ip: &apos;192.168.1.54&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Windows\TEMP\scoped_dir10068_8013}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: e28a3d1730472e91921f4f3a502a549c
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:497)
+	at base.ConnectBaseSetup.CloseBrowser(ConnectBaseSetup.java:114)
+Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	... 28 more
+Caused by: java.lang.NullPointerException: Unable to find executable for: taskkill
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
+	at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
+	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
+	at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+	... 36 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1893960929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1893960929'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;unknown&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:43:45 -0700&apos;
-System info: host: &apos;TRICONNODE109&apos;, ip: &apos;192.168.1.54&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\mahadev\AppData\Local\Temp\scoped_dir8760_23241}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 6e298b826012fa2ca4e607bdb5929f47
-*** Element info: {Using=xpath, value=.//*[@id=&apos;headerStripe&apos;]/div/ul/li[4]/a}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy7.click(Unknown Source)
-	at objectRepo.LogoutPage.ClickonLogoutButton(LogoutPage.java:21)
-	at testScripts.WebActivityTestScript.WebActivityCreateNew_Fail(WebActivityTestScript.java:65)
+System info: host: &apos;TRICONNODE109&apos;, ip: &apos;192.168.1.54&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Windows\TEMP\scoped_dir10068_8013}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: e28a3d1730472e91921f4f3a502a549c
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:658)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:497)
+	at base.ConnectBaseSetup.CloseBrowser(ConnectBaseSetup.java:114)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -148,9 +140,65 @@ Session ID: 6e298b826012fa2ca4e607bdb5929f47
 	at org.testng.TestNG.run(TestNG.java:1057)
 	at org.testng.TestNG.privateMain(TestNG.java:1364)
 	at org.testng.TestNG.main(TestNG.java:1333)
+Caused by: java.lang.RuntimeException: Process refused to die after 10 seconds, and couldn&apos;t taskkill it: Unable to find executable for: taskkill
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:133)
+	at org.openqa.selenium.os.ProcessUtils.killProcess(ProcessUtils.java:81)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.destroyHarder(UnixProcess.java:254)
+	at org.openqa.selenium.os.UnixProcess$SeleniumWatchDog.access$200(UnixProcess.java:208)
+	at org.openqa.selenium.os.UnixProcess.destroy(UnixProcess.java:125)
+	at org.openqa.selenium.os.CommandLine.destroy(CommandLine.java:155)
+	at org.openqa.selenium.remote.service.DriverService.stop(DriverService.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:94)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	... 28 more
+Caused by: java.lang.NullPointerException: Unable to find executable for: taskkill
+	at com.google.common.base.Preconditions.checkNotNull(Preconditions.java:251)
+	at org.openqa.selenium.os.UnixProcess.&lt;init&gt;(UnixProcess.java:62)
+	at org.openqa.selenium.os.CommandLine.&lt;init&gt;(CommandLine.java:38)
+	at org.openqa.selenium.os.WindowsUtils.killPID(WindowsUtils.java:178)
+	at org.openqa.selenium.os.ProcessUtils.killWinProcess(ProcessUtils.java:128)
+	... 36 more
 </pre></div></td>
-<td>30</td>
-<td>testScripts.WebActivityTestScript@47f37ef1</td></tr>
+<td>0</td>
+<td>testScripts.DBATestScript@ea4a92b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScripts.DBATestScript.LaunchBrowserwithURL()'><b>LaunchBrowserwithURL</b><br>Test class: testScripts.DBATestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.DBATestScript@ea4a92b</td></tr>
+<tr>
+<td title='testScripts.WebActivityTestScript.LaunchBrowserwithURL()'><b>LaunchBrowserwithURL</b><br>Test class: testScripts.WebActivityTestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
+<tr>
+<td title='testScripts.WebActivityTestScript.LaunchBrowserwithURL()'><b>LaunchBrowserwithURL</b><br>Test class: testScripts.WebActivityTestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
+<tr>
+<td title='testScripts.DBATestScript.CloseBrowser()'><b>CloseBrowser</b><br>Test class: testScripts.DBATestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.DBATestScript@ea4a92b</td></tr>
+<tr>
+<td title='testScripts.WebActivityTestScript.CloseBrowser()'><b>CloseBrowser</b><br>Test class: testScripts.WebActivityTestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
+<tr>
+<td title='testScripts.WebActivityTestScript.CloseBrowser()'><b>CloseBrowser</b><br>Test class: testScripts.WebActivityTestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -162,18 +210,31 @@ Session ID: 6e298b826012fa2ca4e607bdb5929f47
 <tr>
 <td title='testScripts.DBATestScript.DBACreate_TestIDLater()'><b>DBACreate_TestIDLater</b><br>Test class: testScripts.DBATestScript</td>
 <td></td>
-<td>38</td>
-<td>testScripts.DBATestScript@2ff4f00f</td></tr>
+<td>193</td>
+<td>testScripts.DBATestScript@ea4a92b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
 <td title='testScripts.DBATestScript.DBACreate_TestIDNow()'><b>DBACreate_TestIDNow</b><br>Test class: testScripts.DBATestScript</td>
 <td></td>
-<td>35</td>
-<td>testScripts.DBATestScript@2ff4f00f</td></tr>
+<td>0</td>
+<td>testScripts.DBATestScript@ea4a92b</td></tr>
+<tr>
+<td title='testScripts.WebActivityTestScript.WebActivityCreateNew_Fail()'><b>WebActivityCreateNew_Fail</b><br>Test class: testScripts.WebActivityTestScript</td>
+<td></td>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
 <tr>
 <td title='testScripts.WebActivityTestScript.WebActivityCreateNew_Pass()'><b>WebActivityCreateNew_Pass</b><br>Test class: testScripts.WebActivityTestScript</td>
 <td></td>
-<td>33</td>
-<td>testScripts.WebActivityTestScript@47f37ef1</td></tr>
+<td>0</td>
+<td>testScripts.WebActivityTestScript@6debcae2</td></tr>
 </table><p>
 </body>
 </html>
