@@ -34,7 +34,7 @@ import atu.testng.reports.logging.LogAs;
 import atu.testng.selenium.reports.CaptureScreen;
 import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
 
-@Listeners({ ATUReportsListener.class, ConfigurationListener.class,MethodListener.class })
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class,	MethodListener.class })
 public class ConnectBaseSetup {	
 
 	public static WebDriver driver;	
@@ -72,8 +72,8 @@ public class ConnectBaseSetup {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
 
 		driver = new FirefoxDriver();
-				Log.info("Welcome Firefox browser!");		
-				waitforApge();
+		Log.info("Welcome Firefox browser!");		
+		waitforApge();
 
 		/*driver = new ChromeDriver();			
 		Log.info("Welcome Chrome browser!");		
@@ -92,8 +92,8 @@ public class ConnectBaseSetup {
 		//		driver.get(QaLiveURL);
 
 		// ATU Reports
-		ATUReports.setWebDriver(driver);
-		ATUReports.indexPageDescription = "MGHConnect_Test Project";			
+		ATUReports.setWebDriver(driver);		
+		ATUReports.indexPageDescription = "My Project Description";
 
 		loginPage = PageFactory.initElements(driver, LoginPage.class);
 		logoutPage = PageFactory.initElements(driver, LogoutPage.class);	
@@ -103,7 +103,6 @@ public class ConnectBaseSetup {
 		SpeechCreate= PageFactory.initElements(driver, SpeechAssignment.class);
 		WebActivityCreate= PageFactory.initElements(driver, WebActivityAssignment.class);
 		DBACreate= PageFactory.initElements(driver, DBA.class);
-
 	}					
 
 	@AfterMethod
@@ -117,11 +116,29 @@ public class ConnectBaseSetup {
 	}
 
 	// ATU Reports Method			
+	//@Test
 	public void testNewLogs() throws AWTException, IOException {
+
+		ATUReports.setAuthorInfo("Author ATU", "26-May-2014 3:46", "1.2");
 
 		ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		ATUReports.add("Pass Step", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
 		WebElement element = driver.findElement(By.xpath("/html/body/div/h1/a"));
+		ATUReports.add("Warning Step", LogAs.WARNING,new CaptureScreen(element));
+		ATUReports.add("Fail step", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	}
+
+	//@Test
+	public void testNewLogsForContinuedStepsAfterFailed() throws AWTException,
+	IOException {
+		ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		ATUReports.add("Pass Step", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		WebElement element = driver.findElement(By.xpath("/html/body/div/h1/a"));
+		ATUReports.add("Warning Step", LogAs.WARNING,new CaptureScreen(element));
+		ATUReports.add("Fail step", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		System.out.println("TEST LOG RUNS");
+		ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		ATUReports.add("Pass Step", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
 		ATUReports.add("Warning Step", LogAs.WARNING,new CaptureScreen(element));
 		ATUReports.add("Fail step", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
 	}
