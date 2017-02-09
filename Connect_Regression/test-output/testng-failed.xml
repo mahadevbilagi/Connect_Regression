@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
       <class name="testScripts.DBATestScript">
         <methods>
-          <include name="DBACreate_TestIDNow"/>
           <include name="CloseBrowser"/>
           <include name="DBACreate_TestIDLater"/>
           <include name="LaunchBrowserwithURL"/>
@@ -14,7 +13,8 @@
       <class name="testScripts.WebActivityTestScript">
         <methods>
           <include name="WebActivityCreateNew_Fail"/>
-          <include name="WebActivityCreateNew_Pass"/>
+          <include name="CloseBrowser"/>
+          <include name="LaunchBrowserwithURL"/>
         </methods>
       </class> <!-- testScripts.WebActivityTestScript -->
     </classes>

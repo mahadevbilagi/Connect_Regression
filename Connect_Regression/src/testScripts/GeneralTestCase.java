@@ -10,7 +10,7 @@ import base.ConnectBaseSetup;
 
 public class GeneralTestCase extends ConnectBaseSetup {		
 
-	@Test 
+/*	@Test 
 	public void LoginwithValidCredentials()
 	{			
 		loginPage.CheckLoginWithValidCred("mahadev@gmail.com", "123456");				
@@ -28,7 +28,7 @@ public class GeneralTestCase extends ConnectBaseSetup {
 		loginPage.CheckLoginWithInValidCred("mahadev1234@gmail.com", "12345ad6");	
 		Log.info("LoginwithInValidCredentialsPasswordandEmail Test case completed");
 
-	}
+	}*/
 
 	@Test 
 	public void LoginwithInValidCredentialsEmail()
@@ -45,7 +45,7 @@ public class GeneralTestCase extends ConnectBaseSetup {
 		Log.info("LoginwithInValidCredentialsPassword Test case completed");
 	}					
 
-	@Test 
+/*	@Test 
 	public void navigatetosection() throws InterruptedException
 	{			
 		loginPage.CheckLoginWithValidCred("mahadev@gmail.com", "123456");			
@@ -59,6 +59,6 @@ public class GeneralTestCase extends ConnectBaseSetup {
 		waitforApge();			
 		logoutPage.ClickonLogoutButton();			
 		waitforApge();			
-	}	
+	}	*/
 
 }
