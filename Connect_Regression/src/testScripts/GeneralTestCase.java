@@ -28,7 +28,7 @@ public class GeneralTestCase extends ConnectBaseSetup {
 		loginPage.CheckLoginWithInValidCred("mahadev1234@gmail.com", "12345ad6");	
 		Log.info("LoginwithInValidCredentialsPasswordandEmail Test case completed");
 
-	}*/
+	}
 
 	@Test 
 	public void LoginwithInValidCredentialsEmail()
@@ -36,7 +36,7 @@ public class GeneralTestCase extends ConnectBaseSetup {
 		loginPage.CheckLoginWithInValidCred("mahadev1234@gmail.com", "123456");		
 		Log.info("LoginwithInValidCredentialsEmail Test case completed");
 	}
-
+ 	*/
 	@Test 
 	public void LoginwithInValidCredentialsPassword()
 	{		
