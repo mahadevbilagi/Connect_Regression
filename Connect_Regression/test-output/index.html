@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-skipped">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,  3 skipped,  1 passed</span>
+                    <span class="method-stats">4 methods, 1 failed,  3 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.DBATestScript" hash-for-method="DBACreate_TestIDLater">DBACreate_TestIDLater</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -116,20 +130,6 @@
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testScripts.DBATestScript" hash-for-method="DBACreate_TestIDLater">DBACreate_TestIDLater</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
-                  </li>
                 </ul>
               </div> <!-- suite-section-content -->
             </div> <!-- result-section -->
@@ -140,6 +140,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testScripts.DBATestScript</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="DBACreate_TestIDLater">
+                  </a> <!-- DBACreate_TestIDLater -->
+                  <span class="method-name">DBACreate_TestIDLater</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: Element &lt;a href=&quot;/connect/hmLogout.do?logout=true&amp;amp;navclick=true&amp;amp;cacheEnabled=true&amp;amp;cacheKey=user_all&amp;amp;deleteCache=true&quot;&gt;...&lt;/a&gt; is not clickable at point (918, 7). Other element would receive the click: &lt;div id=&quot;facebox_overlay&quot; class=&quot;facebox_hide facebox_overlayBG&quot; style=&quot;display: block; opacity: 0.75;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 48 milliseconds
+Build info: version: &apos;unknown&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:43:45 -0700&apos;
+System info: host: &apos;TRICONNODE109&apos;, ip: &apos;192.168.1.54&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Windows\TEMP\scoped_dir10752_30620}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: e9053276bf6a322b983fe17f314756cd
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy7.click(Unknown Source)
+	at objectRepo.LogoutPage.ClickonLogoutButton(LogoutPage.java:21)
+	at testScripts.DBATestScript.DBACreate_TestIDLater(DBATestScript.java:60)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -177,21 +212,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testScripts.DBATestScript</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="DBACreate_TestIDLater">
-                  </a> <!-- DBACreate_TestIDLater -->
-                  <span class="method-name">DBACreate_TestIDLater</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -249,24 +269,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'DBACreate_TestIDLater')
 data.setCell(0, 2, 'testScripts.DBATestScript')
-data.setCell(0, 3, 193220);
+data.setCell(0, 3, 40207);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'DBACreate_TestIDNow')
 data.setCell(1, 2, 'testScripts.DBATestScript')
-data.setCell(1, 3, 18);
+data.setCell(1, 3, 2);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'WebActivityCreateNew_Pass')
+data.setCell(2, 1, 'WebActivityCreateNew_Fail')
 data.setCell(2, 2, 'testScripts.WebActivityTestScript')
-data.setCell(2, 3, 17);
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'WebActivityCreateNew_Fail')
+data.setCell(3, 1, 'WebActivityCreateNew_Pass')
 data.setCell(3, 2, 'testScripts.WebActivityTestScript')
 data.setCell(3, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -298,29 +318,31 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">DBACreate_TestIDLater</span>
-                <span class="method-start">284685 ms</span>
+                <span class="method-start">11539 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">CloseBrowser</span>
-                <span class="method-start">477905 ms</span>
+                <span class="method-start">51746 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">DBACreate_TestIDNow</span>
-                <span class="method-start">478758 ms</span>
+                <span class="method-start">52509 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScripts.WebActivityTestScript</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">WebActivityCreateNew_Fail</span>
-                <span class="method-start">478781 ms</span>
+                <span class="method-start">52514 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">WebActivityCreateNew_Pass</span>
-                <span class="method-start">478784 ms</span>
+                <span class="method-start">52571 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

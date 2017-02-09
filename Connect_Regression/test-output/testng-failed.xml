@@ -7,6 +7,7 @@
         <methods>
           <include name="DBACreate_TestIDNow"/>
           <include name="CloseBrowser"/>
+          <include name="DBACreate_TestIDLater"/>
           <include name="LaunchBrowserwithURL"/>
         </methods>
       </class> <!-- testScripts.DBATestScript -->
