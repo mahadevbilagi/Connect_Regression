@@ -122,7 +122,6 @@ public class ConnectBaseSetup {
 	public void testNewLogs() throws AWTException, IOException {
 
 		ATUReports.setAuthorInfo("Author ATU", "26-May-2014 3:46", "1.2");
-
 		ATUReports.add("INfo Step", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		ATUReports.add("Pass Step", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
 		WebElement element = driver.findElement(By.xpath("/html/body/div/h1/a"));
