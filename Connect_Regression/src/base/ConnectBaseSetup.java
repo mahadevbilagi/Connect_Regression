@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import objectRepo.BlogAssignment;
 import objectRepo.DBA;
+import objectRepo.GroupAssignment;
 import objectRepo.LoginPage;
 import objectRepo.LogoutPage;
 import objectRepo.Selectsection;
@@ -19,7 +20,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -58,6 +58,7 @@ public class ConnectBaseSetup {
 	public SpeechAssignment SpeechCreate;
 	public WebActivityAssignment WebActivityCreate;
 	public DBA DBACreate;
+	public GroupAssignment GroupCreate;
 
 	public static Logger Log = Logger.getLogger(Log.class.getName(), null);
 	//	public static org.apache.log4j.Logger Log = LogManager.getLogger(Log.class.getName());			
@@ -71,13 +72,13 @@ public class ConnectBaseSetup {
 		System.setProperty("webdriver.gecko.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\geckodriver.exe");     // Gecko driver path setup					
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
 
-		driver = new FirefoxDriver();
+	/*	driver = new FirefoxDriver();
 		Log.info("Welcome Firefox browser!");		
-		waitforApge();
-
-		/*driver = new ChromeDriver();			
-		Log.info("Welcome Chrome browser!");		
 		waitforApge();*/
+
+		driver = new ChromeDriver();			
+		Log.info("Welcome Chrome browser!");		
+		waitforApge();
 
 		driver.manage().deleteAllCookies();
 
@@ -103,6 +104,7 @@ public class ConnectBaseSetup {
 		SpeechCreate= PageFactory.initElements(driver, SpeechAssignment.class);
 		WebActivityCreate= PageFactory.initElements(driver, WebActivityAssignment.class);
 		DBACreate= PageFactory.initElements(driver, DBA.class);
+		GroupCreate = PageFactory.initElements(driver, GroupAssignment.class);
 	}					
 
 	@AfterMethod

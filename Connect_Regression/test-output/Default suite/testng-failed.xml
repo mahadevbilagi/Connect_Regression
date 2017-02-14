@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.DBATestScript">
+      <class name="testScripts.GroupTestScript">
         <methods>
           <include name="CloseBrowser"/>
-          <include name="DBACreate_TestIDLater"/>
+          <include name="GroupCreateNew_Pass"/>
           <include name="LaunchBrowserwithURL"/>
         </methods>
-      </class> <!-- testScripts.DBATestScript -->
+      </class> <!-- testScripts.GroupTestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

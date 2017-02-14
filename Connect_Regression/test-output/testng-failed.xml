@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testScripts.DBATestScript">
+      <class name="testScripts.GroupTestScript">
         <methods>
           <include name="CloseBrowser"/>
-          <include name="DBACreate_TestIDLater"/>
+          <include name="GroupCreateNew_Pass"/>
           <include name="LaunchBrowserwithURL"/>
         </methods>
-      </class> <!-- testScripts.DBATestScript -->
-      <class name="testScripts.WebActivityTestScript">
-        <methods>
-          <include name="WebActivityCreateNew_Fail"/>
-          <include name="CloseBrowser"/>
-          <include name="LaunchBrowserwithURL"/>
-        </methods>
-      </class> <!-- testScripts.WebActivityTestScript -->
+      </class> <!-- testScripts.GroupTestScript -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

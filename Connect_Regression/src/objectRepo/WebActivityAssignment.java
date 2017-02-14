@@ -175,6 +175,6 @@ public class WebActivityAssignment extends ConnectBaseSetup {
 		}catch(Exception e)
 		{
 			e.printStackTrace();
-		}
+		}		
 	}	
 }
