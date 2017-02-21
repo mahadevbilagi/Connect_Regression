@@ -3,9 +3,14 @@ package TempClassfiles;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import javafx.event.ActionEvent;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class MyTest  {
 
@@ -54,26 +59,23 @@ public class MyTest  {
 
 			java.lang.String Assignmentname =("Web Activity -" +j);
 			
-			System.out.println("started hi 2");
-			
-			Set<String> allWindowHandles = driver.getWindowHandles();
-			for (String currentWindowHandle : allWindowHandles) {
-				if (!currentWindowHandle.equals(currentWindowHandle)) {
-					driver.switchTo().window(currentWindowHandle);
-					driver.close();
-				}
-			}
-			
-//			driver.switchTo().window(currentWindowHandle);
-//			if (driver.getWindowHandles().size() == 1)
-//				return true;
-//			else
-//				return false;
+			System.out.println("started hi 2");										
 
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//li[@id='tabassign_2']/a")).click();
 			Thread.sleep(1000);
-
+			
+			// ----------------------------------------------------------------------------
+			
+			Actions action = new Actions(driver);
+			WebElement ABC = driver.findElement(By.id("facebox_overlay"));
+			action.moveToElement(ABC).moveToElement(driver.findElement(By.id("facebox_overlay"))).sendKeys(Keys.ESCAPE).perform();
+	     	//	action.sendKeys(Keys.ESCAPE).perform();
+			
+			Thread.sleep(500);
+			driver.findElement(By.xpath("//a[@class='btn-typ-two']")).click();				
+			
+			// -----------------------------------------------------------------------------
 			driver.findElement(By.xpath("//a[contains(.,'web activity')]")).click();
 			Thread.sleep(1000);
 
