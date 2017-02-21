@@ -132,8 +132,7 @@ public class WritingAssignment extends ConnectBaseSetup {
 			Log.info("Click on both online");			
 
 			Boolean S = Simple.isSelected();		
-			if(S)
-			{
+			if(S){
 				System.out.println("Text Editor Palette = Simple");
 			}else
 			{

@@ -59,7 +59,8 @@ public class WebActivityAssignment extends ConnectBaseSetup {
 	@FindBy(xpath = "//li[@class='grey_cntr bkbtn buttons btgy']")
 	WebElement SaveandExitRVPage;
 
-	@FindBy(xpath = "//li[@class='assign-blue-btn_cntr buttons btbl']")
+	//@FindBy(xpath = "//li[@class='assign-blue-btn_cntr buttons btbl']")
+	@FindBy(xpath = "//li [@class='assign-blue-btn_cntr buttons btbl' and text()='assign']")
 	WebElement Assign;
 
 	@SuppressWarnings("static-access")
@@ -138,6 +139,7 @@ public class WebActivityAssignment extends ConnectBaseSetup {
 	}
 
 	public void clickAssign(){
+		Assign.isEnabled();
 		Assign.click();
 		Log.info("Click on Assign button");	
 	}	
@@ -169,7 +171,7 @@ public class WebActivityAssignment extends ConnectBaseSetup {
 			enterAvailableStartDate(StartDate);
 			enterAvailableDueDate(DueDate);
 
-			waitforApge();
+			Thread.sleep(2000);
 			clickAssign();
 
 		}catch(Exception e)
