@@ -1,15 +1,15 @@
 package TempClassfiles;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class MyTest  {
-
-	private static final String currentWindowHandle = null;
 
 	public static void main(String[] args) throws InterruptedException 
 	{
@@ -18,32 +18,24 @@ public class MyTest  {
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\mahadev\\git\\Connect_Regression\\Connect_Regression\\src\\resources\\chromedriver.exe"); 	// Chrome driver path setup	
 		driver = new ChromeDriver();	
 		driver.manage().deleteAllCookies();	
-		
+
 		System.out.println("started hi");	
 		driver.manage().window().maximize();
 
-		driver.get("http://connectqastg.mheducation.com/connect/shortUrl.do");         						//  Environment: Dev2			
-		//			        driver.get("http://connectqastg.mheducation.com/connect/shortUrl.do");         //  Environment: QA Staging Cloud 
-		//					driver.get("http://connectqalv.mheducation.com/connect/shortUrl.do");         //  Environment: QA Live Cloud
+		// 	  driver.get("http://connectqastg.mheducation.com/connect/shortUrl.do");         		//  Environment: Dev2			
+			  driver.get("http://connectqastg.mheducation.com/connect/shortUrl.do");         //  Environment: QA Staging Cloud 
+		//	  driver.get("http://connectqalv.mheducation.com/connect/shortUrl.do");         //  Environment: QA Live Cloud
 
 		driver.findElement(By.id("userName")).click();
 		driver.findElement(By.id("userName")).sendKeys("rahul_stgins01@gmail.com");
 
 		driver.findElement(By.id("password")).click();
 		driver.findElement(By.id("password")).sendKeys("Aa123456");
-		
-		System.out.println("started hi 1");
-		
-		try {
-			Thread.sleep(50);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		System.out.println("started hi 1");	
 
 		driver.findElement(By.xpath("//input[contains(@value,'Sign in')]")).click();
 		Thread.sleep(1000);					
-
 
 		for(int j=1; j<=100; j++)
 		{
@@ -53,27 +45,28 @@ public class MyTest  {
 			Thread.sleep(1000);	
 
 			java.lang.String Assignmentname =("Web Activity -" +j);
-			
-			System.out.println("started hi 2");
-			
-			Set<String> allWindowHandles = driver.getWindowHandles();
-			for (String currentWindowHandle : allWindowHandles) {
-				if (!currentWindowHandle.equals(currentWindowHandle)) {
-					driver.switchTo().window(currentWindowHandle);
-					driver.close();
-				}
-			}
-			
-//			driver.switchTo().window(currentWindowHandle);
-//			if (driver.getWindowHandles().size() == 1)
-//				return true;
-//			else
-//				return false;
+
+			System.out.println("started hi 2");										
 
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.findElement(By.xpath("//li[@id='tabassign_2']/a")).click();
 			Thread.sleep(1000);
 
+			// ----------------------------------------------------------------------------
+
+			Actions action = new Actions(driver);
+			WebElement ABC = driver.findElement(By.id("facebox_overlay"));			
+			action.moveToElement(ABC).sendKeys(Keys.ESCAPE).perform();	
+			Thread.sleep(1000);
+			
+			action.moveToElement(driver.findElement(By.xpath("//div[@id='section_copy_share_modal']/div/div/div[@class='mbody']/div/a[@class='btn-typ-two']/span"))).click().perform();
+			
+		//	driver.findElement(By.xpath("//div[@id='section_copy_share_modal']/div/div/div[@class='mbody']/div/a[@class='btn-typ-two']/span")).click();
+						
+		//	driver.findElement(By.xpath("//div[@id='section_copy_share_modal']/div/div/div[@class='mbody']/div/a[@class='btn-typ-two']/span")).click();				
+			Thread.sleep(500);
+			
+			// -----------------------------------------------------------------------------
 			driver.findElement(By.xpath("//a[contains(.,'web activity')]")).click();
 			Thread.sleep(1000);
 

@@ -3,19 +3,20 @@
 <suite name="Suite">
   <test name="Test">  
     <classes>
-    
-     	  <class name="testScripts.GroupAssignment"/>
- <!--     <class name="testScripts.GeneralTestCase"/>
-    	  <class name="testScripts.DBATestScript"/>
-   		  <class name="testScripts.WebActivityTestScript"/>  -->
+    		
+    	  <class name="testScripts.WritingTestScript"/>
+     <!--	  <class name="testScripts.GroupTestScript"/>
+          <class name="testScripts.GeneralTestCase"/>          
+    	  <class name="testScripts.DBATestScript"/>    
+   		  <class name="testScripts.WebActivityTestScript"/>   --> 
    		  
     </classes> 
      </test> <!-- Test --> 
           
-  <listeners>
+<!--  <listeners>
 		<listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
 		<listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
 		<listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
-	</listeners>
+	</listeners>   --> 
 		 
 </suite> <!-- Suite -->
